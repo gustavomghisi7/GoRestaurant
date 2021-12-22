@@ -47,5 +47,4 @@ export default function ModalAddFood({ isOpen, setIsOpen, handleAddFood }: Modal
       </Form>
     </Modal>
   );
-
 }

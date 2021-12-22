@@ -29,7 +29,7 @@ export default function Food({ food, handleEditFood, handleDelete }: FoodProps) 
       available: !isAvailable,
     });
 
-    setIsAvailable( !isAvailable );
+    setIsAvailable(!isAvailable);
   }
 
   const setEditingFood = () => {

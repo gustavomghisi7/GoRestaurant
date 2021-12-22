@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Header from '../../components/Header';
 import api from '../../services/api';
@@ -29,14 +29,13 @@ export default function Dashboad() {
   const [ modalOpen, setModalOpen ] = useState(false);
   const [ editModalOpen, setEditModalOpen ] = useState(false)
 
-
-  useRef(() => {
+  useEffect(() => {
     async function getFood() {
       const response = await api.get('/foods');
       setFoods(response.data)
     }
     getFood();
-  });
+  }, []);
 
   const handleAddFood = async (food: AddFood): Promise<void> => {
     try {

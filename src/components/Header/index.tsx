@@ -8,7 +8,6 @@ interface HeaderProps {
 }
 
 export default function Header ({ openModal }: HeaderProps) {
-
   return (
     <Container>
       <header>
@@ -29,6 +28,4 @@ export default function Header ({ openModal }: HeaderProps) {
       </header>
     </Container>
   )
-
 }
-
